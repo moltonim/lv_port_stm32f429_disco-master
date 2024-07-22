@@ -360,12 +360,12 @@ void HAL_LTDC_MspInit(LTDC_HandleTypeDef *hltdc)
 
   /* LTDC pins configuraiton: PC6 -- 10 */
 //  GPIO_Init_Structure.Pin = GPIO_PIN_6 | GPIO_PIN_7 | GPIO_PIN_10;
-  GPIO_Init_Structure.Pin = GPIO_PIN_6;
+  GPIO_Init_Structure.Pin = GPIO_PIN_6;		// LCD_TFT HSYNC
   HAL_GPIO_Init(GPIOC, &GPIO_Init_Structure);
 
   /* LTDC pins configuraiton: PD3 -- 6 */
   GPIO_Init_Structure.Pin = GPIO_PIN_3 | GPIO_PIN_6;
-  HAL_GPIO_Init(GPIOD, &GPIO_Init_Structure);
+//  HAL_GPIO_Init(GPIOD, &GPIO_Init_Structure);
 
   /* LTDC pins configuraiton: PF10 */
   GPIO_Init_Structure.Pin = GPIO_PIN_10;
